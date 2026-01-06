@@ -8,13 +8,13 @@ import { TechUsedForm } from "@/components/TechUse-Form";
 export default function Home() {
   return (
     <>
-    <div className="pt-16"/>
-    <HeaderForm></HeaderForm>
-    <PresentationForm></PresentationForm>
-    <TechUsedForm></TechUsedForm>
-    <ProjetsForm></ProjetsForm>
 
-    <ContactForm></ContactForm>
+      <HeaderForm></HeaderForm>
+      <PresentationForm></PresentationForm>
+      <TechUsedForm></TechUsedForm>
+      <ProjetsForm></ProjetsForm>
+
+      <ContactForm></ContactForm>
     </>
   );
 }
