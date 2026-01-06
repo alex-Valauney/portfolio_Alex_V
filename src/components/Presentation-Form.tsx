@@ -7,7 +7,7 @@ export function PresentationForm() {
             <h1 className="text-2xl font-bold text-center">Alex Valauney</h1>
             <p className="text-center mt-1 text-sm">
                 DÉVELOPPEUR FULL-STACK<br />
-                EN RECHERCHE D'ALTERNANCE
+                EN RECHERCHE D&apos;ALTERNANCE
             </p>
             <h2 className="text-xl font-semibold mt-6">Présentation :</h2>
             <p className="mt-2">
