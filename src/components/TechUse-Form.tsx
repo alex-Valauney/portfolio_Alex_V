@@ -8,6 +8,8 @@ const logos = [
   "/logo/javascript.svg",
   "/logo/nextjs.svg",
   "/logo/tailwindcss.svg",
+  "/logo/github.svg",
+  "/logo/gitea.svg",
 ];
 
 export function TechUsedForm() {
@@ -41,7 +43,7 @@ export function TechUsedForm() {
               <img
                 key={i}
                 src={logo}
-                alt={`Logo ${i + 1}`}
+                alt={logo.split('/').pop()?.split('.')[0] || 'Technology Logo'}
                 className="absolute w-20 h-20 object-contain"
                 style={{
                   transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
