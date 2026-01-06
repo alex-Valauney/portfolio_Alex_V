@@ -1,27 +1,37 @@
 "use client"
 import React from "react";
 
-const logos = [
+const carouselLogos = [
   "/logo/css.svg",
   "/logo/go.svg",
   "/logo/html5.svg",
   "/logo/javascript.svg",
   "/logo/nextjs.svg",
   "/logo/tailwindcss.svg",
-  "/logo/github.svg",
-  "/logo/gitea.svg",
+];
+
+const allTechnos = [
+  { src: "/logo/css.svg", label: "CSS" },
+  { src: "/logo/go.svg", label: "Go" },
+  { src: "/logo/html5.svg", label: "HTML5" },
+  { src: "/logo/javascript.svg", label: "JavaScript" },
+  { src: "/logo/nextjs.svg", label: "Next.js" },
+  { src: "/logo/tailwindcss.svg", label: "Tailwind CSS" },
+  { src: "/logo/github.svg", label: "GitHub" },
+  { src: "/logo/gitea.svg", label: "Gitea" },
 ];
 
 export function TechUsedForm() {
-  const numLogos = logos.length;
+  const numLogos = carouselLogos.length;
   const radius = 70; // rayon du cercle en px
 
   return (
     <div id="technos" className="scroll-mt-16 bg-gray-600 text-white p-6 flex flex-col items-center">
       <h2 className="mb-6 text-xl font-semibold">Technologies utilisées :</h2>
 
+      {/* Carousel 3D */}
       <div
-        className="relative w-[320px] h-[200px] perspective-1000"
+        className="relative w-[320px] h-[200px] perspective-1000 mb-10"
         style={{
           perspective: "1000px", // perspective pour effet 3D
         }}
@@ -37,7 +47,7 @@ export function TechUsedForm() {
             transformStyle: "preserve-3d",
           }}
         >
-          {logos.map((logo, i) => {
+          {carouselLogos.map((logo, i) => {
             const angle = (360 / numLogos) * i;
             return (
               <img
@@ -57,6 +67,20 @@ export function TechUsedForm() {
             );
           })}
         </div>
+      </div>
+
+      {/* Liste complète en dessous */}
+      <div className="flex flex-wrap justify-center gap-6 mt-4 max-w-2xl">
+        {allTechnos.map((tech, index) => (
+          <div key={index} className="flex flex-col items-center gap-2">
+            <img
+              src={tech.src}
+              alt={tech.label}
+              className="w-12 h-12 object-contain hover:scale-110 transition-transform duration-200"
+            />
+            <span className="text-sm font-medium">{tech.label}</span>
+          </div>
+        ))}
       </div>
 
       <style>{`
